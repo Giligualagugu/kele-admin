@@ -1,0 +1,34 @@
+server:
+  port: 8012
+
+spring:
+  application:
+    name: kele-admin-server
+  security:
+    user:
+      name: "xukele"
+      password: "kele123"
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8010/eureka/
+
+  instance:
+    instance-id: kele-admin
+    lease-renewal-interval-in-seconds: 10
+    health-check-url-path: /actuator/health
+    metadata-map:
+      user.name: ${spring.security.user.name}
+      user.password: ${spring.security.user.password}
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
