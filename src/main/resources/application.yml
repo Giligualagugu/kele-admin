@@ -16,6 +16,7 @@ eureka:
       defaultZone: http://127.0.0.1:8010/eureka/
 
   instance:
+    prefer-ip-address: true
     instance-id: kele-admin
     lease-renewal-interval-in-seconds: 10
     health-check-url-path: /actuator/health
