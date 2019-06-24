@@ -16,7 +16,6 @@ eureka:
       defaultZone: http://106.15.238.125:8010/eureka/
 
   instance:
-    ip-address: 106.15.238.125
     prefer-ip-address: true
     instance-id: kele-admin
     lease-renewal-interval-in-seconds: 10
