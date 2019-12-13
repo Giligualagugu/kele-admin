@@ -13,7 +13,7 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://192.168.9.100:8010/eureka/,http://192.168.9.100:8011/eureka/
+      defaultZone: http://106.15.238.125:9010/eureka/
 
   instance:
     prefer-ip-address: true
@@ -33,6 +33,3 @@ management:
   endpoint:
     health:
       show-details: ALWAYS
-
-logging:
-  file: /usr/local/logfiles/springadmin.log
